@@ -1,0 +1,148 @@
+ nmap -A netflix.com 
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-07-26 00:54 IST
+Nmap scan report for netflix.com (54.246.79.9)
+Host is up (0.19s latency).
+Other addresses for netflix.com (not scanned): 54.170.196.176 52.214.181.141 2a05:d018:76c:b683:f711:f0cf:5cc7:b815 2a05:d018:76c:b684:8e48:47c9:84aa:b34d 2a05:d018:76c:b685:3b38:679d:2640:1ced
+rDNS record for 54.246.79.9: ec2-54-246-79-9.eu-west-1.compute.amazonaws.com
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http
+|_http-cors: HEAD GET POST PUT DELETE TRACE OPTIONS
+| http-methods: 
+|_  Potentially risky methods: PUT DELETE TRACE SCRIPT
+|_http-title: Did not follow redirect to https://netflix.com/
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 404 Not Found
+|     Content-Length: 7
+|     Connection: close
+|     BLOCKED
+|   HTTPOptions: 
+|     HTTP/1.0 200 OK
+|     Content-Length: 0
+|     Access-Control-Allow-Origin: *
+|     Access-Control-Allow-Credentials: true
+|     Allow: GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, SCRIPT
+|     Access-Control-Allow-Methods: GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, SCRIPT
+|     Access-Control-Allow-Headers: Authorization,Content-Type,Content-Encoding,Accept,X-Netflix.application.name,X-Netflix.application.version,X-Netflix.esn,X-Netflix.device.type,X-Netflix.certification.version,X-Netflix.request.uuid,X-Netflix.originating.request.uuid,X-Netflix.user.id,X-Netflix.oauth.consumer.key,X-Netflix.oauth.token,X-Netflix.ichnaea.request.type,X-Netflix.Request.Routing,X-NETFLIX-PREAPP-PARTNER-ID,X-NETFLIX-PREAPP-INTEGRITY-VALUE,X-Netflix.Request.Priority,X-Netflix.Retry.Client.Policy,X-Netflix.Client.Request.Name,X-Netflix.Request.Retry.Policy,X-Netflix.Request.Retry.Policy.Default,X-Netflix.request.client.user.guid,X-Ne
+|   RTSPRequest: 
+|     HTTP/1.1 200 OK
+|     Content-Length: 0
+|     Access-Control-Allow-Origin: *
+|     Access-Control-Allow-Credentials: true
+|     Allow: GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, SCRIPT
+|     Access-Control-Allow-Methods: GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, SCRIPT
+|_    Access-Control-Allow-Headers: Authorization,Content-Type,Content-Encoding,Accept,X-Netflix.application.name,X-Netflix.application.version,X-Netflix.esn,X-Netflix.device.type,X-Netflix.certification.version,X-Netflix.request.uuid,X-Netflix.originating.request.uuid,X-Netflix.user.id,X-Netflix.oauth.consumer.key,X-Netflix.oauth.token,X-Netflix.ichnaea.request.type,X-Netflix.Request.Routing,X-NETFLIX-PREAPP-PARTNER-ID,X-NETFLIX-PREAPP-INTEGRITY-VALUE,X-Netflix.Request.Priority,X-Netflix.Retry.Client.Policy,X-Netflix.Client.Request.Name,X-Netflix.Request.Retry.Policy,X-Netflix.Request.Retry.Policy.Default,X-Netflix.request.client.user.guid,X-Ne
+443/tcp open  ssl/https envoy
+|_http-server-header: envoy
+|_http-title: Did not follow redirect to https://www.netflix.com/
+|_http-cors: HEAD GET POST PUT DELETE TRACE OPTIONS
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Content-Type: text/html;charset=utf-8
+|     Content-Language: en
+|     Content-Length: 435
+|     Date: Thu, 25 Jul 2024 19:25:12 GMT
+|     Via: 1.1 i-01070188f1472e177 (eu-west-1)
+|     X-Originating-URL: https://100.86.67.29/nice%20ports%2C/Tri%6Eity.txt%2ebak
+|     Set-Cookie: nfvdid=BQFmAAEBEF3z7whUsiq-lSORiPKVzoBAVETAm2Bne1y8yEus8E5Gf7-xczvp99Qnd92gNeNZaKV98x527s4Ox2WPoadMsC0l8TcVrd_r2roEs1MgO9Stvw%3D%3D; Domain=.netflix.com; Path=/; Max-Age=31536000
+|     X-Netflix.nfstatus: 1_1
+|     X-Netflix.proxy.execution-time: 227
+|     Connection: close
+|     <!doctype html><html lang="en"><head><title>HTTP Status 400 
+|     Request</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}<
+|   GetRequest: 
+|     HTTP/1.1 404 Not Found
+|     Content-Length: 7
+|     Connection: close
+|     BLOCKED
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Content-Length: 0
+|     Access-Control-Allow-Origin: *
+|     Access-Control-Allow-Credentials: true
+|     Allow: GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, SCRIPT
+|     Access-Control-Allow-Methods: GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, SCRIPT
+|_    Access-Control-Allow-Headers: Authorization,Content-Type,Content-Encoding,Accept,X-Netflix.application.name,X-Netflix.application.version,X-Netflix.esn,X-Netflix.device.type,X-Netflix.certification.version,X-Netflix.request.uuid,X-Netflix.originating.request.uuid,X-Netflix.user.id,X-Netflix.oauth.consumer.key,X-Netflix.oauth.token,X-Netflix.ichnaea.request.type,X-Netflix.Request.Routing,X-NETFLIX-PREAPP-PARTNER-ID,X-NETFLIX-PREAPP-INTEGRITY-VALUE,X-Netflix.Request.Priority,X-Netflix.Retry.Client.Policy,X-Netflix.Client.Request.Name,X-Netflix.Request.Retry.Policy,X-Netflix.Request.Retry.Policy.Default,X-Netflix.request.client.user.guid,X-Ne
+| ssl-cert: Subject: commonName=www.netflix.com/organizationName=Netflix, Inc./stateOrProvinceName=California/countryName=US
+| Subject Alternative Name: DNS:account.netflix.com, DNS:ca.netflix.com, DNS:netflix.ca, DNS:netflix.com, DNS:signup.netflix.com, DNS:www.netflix.ca, DNS:www1.netflix.com, DNS:www2.netflix.com, DNS:www3.netflix.com, DNS:develop-stage.netflix.com, DNS:release-stage.netflix.com, DNS:www.netflix.com, DNS:tv.netflix.com, DNS:embed.develop-stage.netflix.com, DNS:embed.release-stage.netflix.com
+| Not valid before: 2023-10-25T00:00:00
+|_Not valid after:  2024-10-24T21:48:09
+| http-methods: 
+|_  Potentially risky methods: PUT DELETE TRACE SCRIPT
+|_ssl-date: TLS randomness does not represent time
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.94SVN%I=7%D=7/26%Time=66A2A692%P=x86_64-unknown-linux-gn
+SF:u%r(GetRequest,47,"HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-Length:\
+SF:x207\r\nConnection:\x20close\r\n\r\nBLOCKED")%r(HTTPOptions,808,"HTTP/1
+SF:\.0\x20200\x20OK\r\nContent-Length:\x200\r\nAccess-Control-Allow-Origin
+SF::\x20\*\r\nAccess-Control-Allow-Credentials:\x20true\r\nAllow:\x20GET,\
+SF:x20HEAD,\x20POST,\x20PUT,\x20DELETE,\x20TRACE,\x20OPTIONS,\x20SCRIPT\r\
+SF:nAccess-Control-Allow-Methods:\x20GET,\x20HEAD,\x20POST,\x20PUT,\x20DEL
+SF:ETE,\x20TRACE,\x20OPTIONS,\x20SCRIPT\r\nAccess-Control-Allow-Headers:\x
+SF:20Authorization,Content-Type,Content-Encoding,Accept,X-Netflix\.applica
+SF:tion\.name,X-Netflix\.application\.version,X-Netflix\.esn,X-Netflix\.de
+SF:vice\.type,X-Netflix\.certification\.version,X-Netflix\.request\.uuid,X
+SF:-Netflix\.originating\.request\.uuid,X-Netflix\.user\.id,X-Netflix\.oau
+SF:th\.consumer\.key,X-Netflix\.oauth\.token,X-Netflix\.ichnaea\.request\.
+SF:type,X-Netflix\.Request\.Routing,X-NETFLIX-PREAPP-PARTNER-ID,X-NETFLIX-
+SF:PREAPP-INTEGRITY-VALUE,X-Netflix\.Request\.Priority,X-Netflix\.Retry\.C
+SF:lient\.Policy,X-Netflix\.Client\.Request\.Name,X-Netflix\.Request\.Retr
+SF:y\.Policy,X-Netflix\.Request\.Retry\.Policy\.Default,X-Netflix\.request
+SF:\.client\.user\.guid,X-Ne")%r(RTSPRequest,7F6,"HTTP/1\.1\x20200\x20OK\r
+SF:\nContent-Length:\x200\r\nAccess-Control-Allow-Origin:\x20\*\r\nAccess-
+SF:Control-Allow-Credentials:\x20true\r\nAllow:\x20GET,\x20HEAD,\x20POST,\
+SF:x20PUT,\x20DELETE,\x20TRACE,\x20OPTIONS,\x20SCRIPT\r\nAccess-Control-Al
+SF:low-Methods:\x20GET,\x20HEAD,\x20POST,\x20PUT,\x20DELETE,\x20TRACE,\x20
+SF:OPTIONS,\x20SCRIPT\r\nAccess-Control-Allow-Headers:\x20Authorization,Co
+SF:ntent-Type,Content-Encoding,Accept,X-Netflix\.application\.name,X-Netfl
+SF:ix\.application\.version,X-Netflix\.esn,X-Netflix\.device\.type,X-Netfl
+SF:ix\.certification\.version,X-Netflix\.request\.uuid,X-Netflix\.originat
+SF:ing\.request\.uuid,X-Netflix\.user\.id,X-Netflix\.oauth\.consumer\.key,
+SF:X-Netflix\.oauth\.token,X-Netflix\.ichnaea\.request\.type,X-Netflix\.Re
+SF:quest\.Routing,X-NETFLIX-PREAPP-PARTNER-ID,X-NETFLIX-PREAPP-INTEGRITY-V
+SF:ALUE,X-Netflix\.Request\.Priority,X-Netflix\.Retry\.Client\.Policy,X-Ne
+SF:tflix\.Client\.Request\.Name,X-Netflix\.Request\.Retry\.Policy,X-Netfli
+SF:x\.Request\.Retry\.Policy\.Default,X-Netflix\.request\.client\.user\.gu
+SF:id,X-Ne");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.94SVN%T=SSL%I=7%D=7/26%Time=66A2A698%P=x86_64-unknown-l
+SF:inux-gnu%r(GetRequest,47,"HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-L
+SF:ength:\x207\r\nConnection:\x20close\r\n\r\nBLOCKED")%r(HTTPOptions,80B,
+SF:"HTTP/1\.1\x20200\x20OK\r\nContent-Length:\x200\r\nAccess-Control-Allow
+SF:-Origin:\x20\*\r\nAccess-Control-Allow-Credentials:\x20true\r\nAllow:\x
+SF:20GET,\x20HEAD,\x20POST,\x20PUT,\x20DELETE,\x20TRACE,\x20OPTIONS,\x20SC
+SF:RIPT\r\nAccess-Control-Allow-Methods:\x20GET,\x20HEAD,\x20POST,\x20PUT,
+SF:\x20DELETE,\x20TRACE,\x20OPTIONS,\x20SCRIPT\r\nAccess-Control-Allow-Hea
+SF:ders:\x20Authorization,Content-Type,Content-Encoding,Accept,X-Netflix\.
+SF:application\.name,X-Netflix\.application\.version,X-Netflix\.esn,X-Netf
+SF:lix\.device\.type,X-Netflix\.certification\.version,X-Netflix\.request\
+SF:.uuid,X-Netflix\.originating\.request\.uuid,X-Netflix\.user\.id,X-Netfl
+SF:ix\.oauth\.consumer\.key,X-Netflix\.oauth\.token,X-Netflix\.ichnaea\.re
+SF:quest\.type,X-Netflix\.Request\.Routing,X-NETFLIX-PREAPP-PARTNER-ID,X-N
+SF:ETFLIX-PREAPP-INTEGRITY-VALUE,X-Netflix\.Request\.Priority,X-Netflix\.R
+SF:etry\.Client\.Policy,X-Netflix\.Client\.Request\.Name,X-Netflix\.Reques
+SF:t\.Retry\.Policy,X-Netflix\.Request\.Retry\.Policy\.Default,X-Netflix\.
+SF:request\.client\.user\.guid,X-Ne")%r(FourOhFourRequest,3CE,"HTTP/1\.1\x
+SF:20400\x20Bad\x20Request\r\nContent-Type:\x20text/html;charset=utf-8\r\n
+SF:Content-Language:\x20en\r\nContent-Length:\x20435\r\nDate:\x20Thu,\x202
+SF:5\x20Jul\x202024\x2019:25:12\x20GMT\r\nVia:\x201\.1\x20i-01070188f1472e
+SF:177\x20\(eu-west-1\)\r\nX-Originating-URL:\x20https://100\.86\.67\.29/n
+SF:ice%20ports%2C/Tri%6Eity\.txt%2ebak\r\nSet-Cookie:\x20nfvdid=BQFmAAEBEF
+SF:3z7whUsiq-lSORiPKVzoBAVETAm2Bne1y8yEus8E5Gf7-xczvp99Qnd92gNeNZaKV98x527
+SF:s4Ox2WPoadMsC0l8TcVrd_r2roEs1MgO9Stvw%3D%3D;\x20Domain=\.netflix\.com;\
+SF:x20Path=/;\x20Max-Age=31536000\r\nX-Netflix\.nfstatus:\x201_1\r\nX-Netf
+SF:lix\.proxy\.execution-time:\x20227\r\nConnection:\x20close\r\n\r\n<!doc
+SF:type\x20html><html\x20lang=\"en\"><head><title>HTTP\x20Status\x20400\x2
+SF:0\xe2\x80\x93\x20Bad\x20Request</title><style\x20type=\"text/css\">body
+SF:\x20{font-family:Tahoma,Arial,sans-serif;}\x20h1,\x20h2,\x20h3,\x20b\x2
+SF:0{color:white;background-color:#525D76;}\x20h1\x20{font-size:22px;}\x20
+SF:h2\x20{font-size:16px;}\x20h3\x20{font-size:14px;}\x20p\x20{font-size:1
+SF:2px;}\x20a\x20{color:black;}\x20\.line\x20{height:1px;background-color:
+SF:#525D76;border:none;}<");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 151.86 seconds
+                                                              
